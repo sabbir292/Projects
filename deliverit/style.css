@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --body-bg: #ffffff;
+    --main-bg: #fff9f3;
+    --color-white: white;
+    --logo-font-size: 2rem;
+    --logo-font-size-small:1.8rem;
+    --menu-item-font-size: 1.5rem;
+    --menu-item-font-size-small:1.3rem;
+    --menu-item-font-weight:500;
+    --logo-font-weight:600;
+    --nav-height: 5rem;
+    --navbar-margin: 2rem 5rem;
+    --logo-gradient: linear-gradient(to right, #d264ee, #6e05b4) border-box;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    object-fit: cover;
+    list-style: none;
+    text-decoration: none;
+    transition: 300ms ease;
+
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poor Story', cursive;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(./images/delivery-5-.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: 100%; */
+}
+
+.main-container {
+    background-color: var(--main-bg);
+    width: 75vw;
+    margin: auto;
+    height: fit-content;
+    padding: var(--navbar-margin);
+    box-shadow: 0 0 10px 0px rgb(0 0 0);
+    border-radius: 4rem;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--nav-height);  
+}
+
+/* navbar typography */
+.navbar li a {
+    font-size: var(--menu-item-font-size);
+    font-weight: var(--menu-item-font-weight);
+}
+
+.navbar .logo li a {
+    font-size: var(--logo-font-size);
+    font-weight: var(--logo-font-weight);
+    background: var(--logo-gradient); 
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* navbar typography */
+
+
+
+/* logo */
+
+/* End of logo */
+/* menu-items */
+.menu-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70%;
+    flex-grow: 1;
+}
+
+/* End of menu-items */
+/* navbar btn */
+.sign-up-btn {   
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, #ffe986, #fd9037) border-box;
+}
+.btn{
+    width: 12rem;
+    height: 3.8rem;
+    font-size: 1.2rem;
+    border-radius: 50em;
+    border: 4px solid transparent;
+}
+/* navbar btn */
+
+
+/* End of Navbar */
+
+/* hero section */
+
+.hero-container{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 40% auto;
+    overflow: hidden;
+    gap: 1rem;
+}
+/* brief */
+.brief-info{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+.brief-info .heading h1{
+    font-size: 2.9rem;
+}
+.brief-info .heading h3{
+    width: 70%;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+/* brief button */
+
+.brief-btn{
+    background: 
+    linear-gradient(to right, #ffe986, #fd9037) border-box;
+}
+/* End brief button */
+/* end of brief */
+.hero-img{
+    position: relative;
+}
+.hero-img img{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Medium device */
+
+@media screen and (max-width: 1300px) {
+    .main-container{
+        width: 90%;
+        height: fit-content;
+    }
+    /* .navbar .menu-items li a{
+        flex-basis: auto;
+        font-size: var(--menu-item-font-size-small);
+        transition: 300ms ease;
+    }
+    .navbar .logo li a{
+        font-size: var(--logo-font-size-small);
+        transition: 300ms ease;
+    } */
+}
+
+/* Medium device*/
+
+
+
+/* *****Small Device******* */
+    @media screen and (max-width : 1100px){
+
+        /* Font size */
+           .navbar .logo ul a {
+            font-size: var(--logo-font-size-small);
+           }
+           .navbar .menu-items ul a {
+            font-size: var(--menu-item-font-size-small);
+           }
+        /* Font size */
+
+        .main-container{
+            width: 90vw;
+            /* background-color: red; */
+            height: fit-content;
+            border-radius: 1.5rem;
+            padding: 2rem;
+        }
+
+
+        .navbar{
+            flex-direction: column;
+            align-items: flex-start;
+            height: fit-content;
+            gap: 2rem;
+        }
+
+        .menu-items{
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .hero-container{
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+            min-height: 65rem;
+        }
+        .hero-container .hero-img{
+           position: relative;
+           flex-grow: 1;
+        }
+
+        /* contact us */
+        .brief-info .inputs{
+            width: 100%;
+            margin: 1rem auto;
+        }
+       
+        
+    }
+
+/* *****End of Small Device******* */
+
+/* contact us page */
+.brief-info .inputs{
+    display: flex;
+    text-align: start;
+    gap: 1rem;
+    flex-direction: column;
+    width: 80%;
+    margin: 1rem 0;
+}
+.brief-info .inputs input{
+    height: 3rem;
+    border-radius: 1rem;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+}
+.brief-info .inquery{
+    height: 10rem;
+    border-radius: 1rem;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+}
+
+.submit-btn{
+    background: 
+    linear-gradient(to right, #ffe986, #fd9037) border-box;
+}
+.more-info-btn{
+    background: 
+    linear-gradient(to right, #ffe986, #fd9037) border-box;
+}
+
+
+/* hovers */
+button:hover{
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, #ffe986, #fd9037) border-box; 
+    transition: 300ms ease;
+}
+.sign-up-btn:hover{
+    background: 
+    linear-gradient(to right, #ffe986, #fd9037) border-box;
+}
+
+.navbar li a:hover{
+   transform: translate(-1rem);
+    background: var(--logo-gradient); 
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.navbar li a.active{
+    color: rgb(121, 8, 8);
+    border-bottom: 1px solid black;
+    font-weight: 600;
+}
+
+.navbar .logo li a:hover {
+   
+    background:  linear-gradient(to right, #ffe986, #fd9037) border-box;; 
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+/* hovers */
+/* End of contact us page */
